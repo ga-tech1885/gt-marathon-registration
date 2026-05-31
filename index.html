@@ -1,22 +1,85 @@
-<form id="registrationForm">
-  <input type="text" placeholder="Full name" required>
-  <input type="email" placeholder="School email" required>
-  <input type="text" placeholder="State tryout location" required>
-  <input type="text" placeholder="Race experience" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Endurance Ambassador Program</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-  <button type="submit">Submit Application</button>
-</form>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Student Endurance Ambassador Program</h1>
+      <p>Represent your campus. Compete nationwide. Run with purpose.</p>
+      <a href="#apply" class="button">Apply for Tryouts</a>
+    </div>
+  </header>
 
-<p id="message"></p>
+  <main>
+    <section class="card">
+      <h2>Program Overview</h2>
+      <p>
+        The Student Endurance Ambassador Program is a selective opportunity for
+        graduate and undergraduate students with a passion for distance running,
+        leadership, and community engagement.
+      </p>
+      <p>
+        Selected participants may be considered for sponsored travel to a national
+        marathon event following state-level tryouts.
+      </p>
+    </section>
 
-<script>
-  document.getElementById("registrationForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    <section class="card highlight">
+      <h2>Limited Spots Available</h2>
+      <p>
+        Tryout interest forms are being reviewed on a rolling basis. Early
+        applicants may receive priority consideration for regional placement.
+      </p>
+    </section>
 
-    // Do NOT collect, save, send, log, or transmit form data.
-    document.getElementById("message").textContent =
-      "Demo complete: this simulated registration form does not collect or store submitted information.";
+    <section class="card" id="apply">
+      <h2>Interest Form</h2>
+      <p class="note">
+        Demo form for academic simulation only. No information is collected,
+        transmitted, stored, or logged.
+      </p>
 
-    this.reset();
-  });
-</script>
+      <form id="registrationForm">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required />
+
+        <label>School Email</label>
+        <input type="email" placeholder="name@school.edu" required />
+
+        <label>State for Tryout</label>
+        <input type="text" placeholder="Example: Georgia" required />
+
+        <label>Running Experience</label>
+        <textarea placeholder="Briefly describe your distance running experience"></textarea>
+
+        <button type="submit">Submit Interest Form</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Academic cybersecurity awareness simulation.</p>
+  </footer>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Safety: this page does not collect, save, transmit, or log any form data.
+      document.getElementById("message").textContent =
+        "Demo complete: this simulated form does not collect or store submitted information.";
+
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
