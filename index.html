@@ -72,7 +72,10 @@
 
   <script>
     document.getElementById("registrationForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+    event.preventDefault();
+
+    window.location.href = "confirmation.html";
+});
 
       // Safety: this page does not collect, save, transmit, or log any form data.
       document.getElementById("message").textContent =
