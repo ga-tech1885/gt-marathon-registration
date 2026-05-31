@@ -1,0 +1,22 @@
+<form id="registrationForm">
+  <input type="text" placeholder="Full name" required>
+  <input type="email" placeholder="School email" required>
+  <input type="text" placeholder="State tryout location" required>
+  <input type="text" placeholder="Race experience" required>
+
+  <button type="submit">Submit Application</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Do NOT collect, save, send, log, or transmit form data.
+    document.getElementById("message").textContent =
+      "Demo complete: this simulated registration form does not collect or store submitted information.";
+
+    this.reset();
+  });
+</script>
