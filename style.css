@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f4ee;
+  color: #1f1f1f;
+}
+
+.hero {
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(0, 33, 71, 0.75), rgba(0, 33, 71, 0.75)),
+    url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.overlay {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.button,
+button {
+  background: #b3a369;
+  color: #111;
+  border: none;
+  padding: 14px 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover,
+button:hover {
+  background: #c7b87b;
+}
+
+main {
+  max-width: 900px;
+  margin: -60px auto 40px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.highlight {
+  border-left: 8px solid #b3a369;
+}
+
+h2 {
+  color: #002147;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 110px;
+}
+
+#message {
+  margin-top: 18px;
+  font-weight: bold;
+  color: #006400;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #002147;
+  color: white;
+}
