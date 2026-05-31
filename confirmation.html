@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="overlay">
+            <h1>Application Received</h1>
+            <p>Thank you for your interest in the Student Endurance Ambassador Program.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Submission Confirmation</h2>
+
+            <p>Your application has been successfully received and entered into the review process.</p>
+
+            <p><strong>Status:</strong> Received</p>
+            <p><strong>Review Stage:</strong> Initial Screening</p>
+            <p><strong>Estimated Review Time:</strong> 5–7 Business Days</p>
+
+            <p id="reference"></p>
+
+            <a class="button" href="index.html">Return to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Endurance Ambassador Program</p>
+    </footer>
+
+    <script>
+        const refNum = "SEA-" + Math.floor(Math.random() * 90000 + 10000);
+        document.getElementById("reference").innerHTML =
+            "<strong>Reference Number:</strong> " + refNum;
+    </script>
+
+</body>
+</html>
