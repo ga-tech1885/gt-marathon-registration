@@ -10,9 +10,9 @@ body {
 }
 
 .hero {
-  min-height: 420px;
+  min-height: 300px;
   background:
-    linear-gradient(rgba(0, 33, 71, 0.75), rgba(0, 33, 71, 0.75)),
+    linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)),
     url("images/banner.jpg");
   background-size: cover;
   background-position: center;
