@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Endurance Ambassador Program</title>
+  <title>Georgia Tech Student Endurance Ambassador Program</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="hero">
     <div class="overlay">
-      <h1>Student Endurance Ambassador Program</h1>
-      <p>Represent your campus. Compete nationwide. Run with purpose.</p>
+      <h1>Georgia Tech Student Endurance Ambassador Program</h1>
+      <p>Represent Georgia Tech. Compete regionally. Run with purpose.</p>
       <a href="#apply" class="button">Apply for Tryouts</a>
     </div>
   </header>
@@ -20,13 +20,13 @@
     <section class="card">
       <h2>Program Overview</h2>
       <p>
-        The Student Endurance Ambassador Program is a selective opportunity for
-        graduate and undergraduate students with a passion for distance running,
-        leadership, and community engagement.
+        The Georgia Tech Student Endurance Ambassador Program is a selective
+        opportunity for students interested in distance running, leadership,
+        and campus community engagement.
       </p>
       <p>
-        Selected participants may be considered for sponsored travel to a national
-        marathon event following state-level tryouts.
+        Selected applicants may be considered for sponsored participation in
+        regional marathon and endurance events.
       </p>
     </section>
 
@@ -39,51 +39,73 @@
     </section>
 
     <section class="card" id="apply">
-      <h2>Interest Form</h2>
-      <p class="note">
-        Thank you for your submission.
-        Applications are currently under review.
-        Selected participants will be contacted by email.
-      </p>
+      <h2>Tryout Interest Form</h2>
 
       <form id="registrationForm">
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your full name" required />
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Enter your full name" required />
 
-        <label>School Email</label>
-        <input type="email" placeholder="name@school.edu" required />
+        <label for="email">Georgia Tech Email</label>
+        <input id="email" type="email" placeholder="name@gatech.edu" required />
 
-        <label>State for Tryout</label>
-        <input type="text" placeholder="Example: Georgia" required />
+        <label for="program">Program or Degree</label>
+        <input id="program" type="text" placeholder="Example: OMS Cybersecurity" required />
 
-        <label>Running Experience</label>
-        <textarea placeholder="Briefly describe your distance running experience"></textarea>
+        <label for="affiliation">Campus Affiliation</label>
+        <select id="affiliation" required>
+          <option value="">Select one</option>
+          <option>Undergraduate Student</option>
+          <option>Graduate Student</option>
+          <option>Online Master's Student</option>
+          <option>Teaching Assistant</option>
+          <option>Faculty or Staff</option>
+        </select>
+
+        <label for="region">Preferred Tryout Region</label>
+        <input id="region" type="text" placeholder="Example: Georgia, Southeast, West Coast" required />
+
+        <label for="distance">Preferred Race Distance</label>
+        <select id="distance" required>
+          <option value="">Select one</option>
+          <option>5K</option>
+          <option>10K</option>
+          <option>Half Marathon</option>
+          <option>Marathon</option>
+          <option>Triathlon / Multi-sport</option>
+        </select>
+
+        <label for="shirt">Shirt Size</label>
+        <select id="shirt">
+          <option value="">Select one</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+
+        <label for="experience">Running or Endurance Experience</label>
+        <textarea id="experience" placeholder="Briefly describe your running, racing, or endurance background"></textarea>
 
         <button type="submit">Submit Interest Form</button>
       </form>
-
-      <p id="message"></p>
     </section>
   </main>
 
   <footer>
-    <p>Academic cybersecurity awareness simulation.</p>
+    <p>Georgia Tech Student Endurance Ambassador Program</p>
+    <p>Email: info@gatech.fit</p>
   </footer>
 
   <script>
-    document.getElementById("registrationForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    const form = document.getElementById("registrationForm");
 
-    window.location.href = "confirmation.html";
-});
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
 
-      // Safety: this page does not collect, save, transmit, or log any form data.
-      document.getElementById("message").textContent =
-        "Thank you for your submission.
-        Applications are currently under review.
-        Selected participants will be contacted by email.";
-
-      this.reset();
+      // No form data is stored, logged, or transmitted.
+      window.location.assign("confirmation.html");
     });
   </script>
 
