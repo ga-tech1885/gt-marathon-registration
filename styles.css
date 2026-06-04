@@ -112,3 +112,21 @@ footer {
   background: #002147;
   color: d4af37;
 }
+
+/* Payment Fieldset Styling */
+.payment-details {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.payment-details p {
+  font-weight: bold;
+  color: #d9534f; /* Muted red warning color for the fee message */
+  margin-bottom: 15px;
+}
+
+form button[type="submit"] {
+  margin-top: 25px;
+}
