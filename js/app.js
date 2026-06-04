@@ -1,6 +1,5 @@
 /**
  * GT Student Endurance Ambassador Program - Confirmation Logic
- * Handles unique application reference tracking securely.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,4 +27,47 @@ function generateReferenceNumber() {
 
     referenceContainer.appendChild(label);
     referenceContainer.appendChild(value);
+}
+
+/**
+ * GT Student Endurance Ambassador Program - Core Application Logic
+ * Safely handles form processing and validation.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const registrationForm = document.getElementById('registrationForm');
+   
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', handleFormSubmission);
+    }
+});
+
+/**
+ * Validates and processes the registration form submission
+ * @param {Event} event
+ */
+function handleFormSubmission(event) {
+    event.preventDefault();
+
+    
+    const emailInput = document.getElementById('email').value;
+    const phoneInput = document.getElementById('phone').value;
+
+    if (!validateEmail(emailInput)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+
+    window.location.assign("confirmation.html");
+}
+
+/**
+ * Standard email validation regex helper
+ * @param {string} email
+ * @returns {boolean}
+ */
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
 }
