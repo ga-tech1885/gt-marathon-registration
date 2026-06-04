@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Received</title>
+    <title>Application Received | Georgia Tech Student Endurance Ambassador Program</title>
+    <meta name="description" content="Confirmation page for the Georgia Tech Student Endurance Ambassador Program application.">
+   
+    <!-- Styles & Fonts -->
     <link rel="stylesheet" href="styles.css">
+   
+    <!-- JS Module (Loads asynchronously and maintains clean separation of concerns) -->
+    <script src="js/app.js" defer></script>
 </head>
 <body>
 
@@ -16,30 +22,27 @@
     </header>
 
     <main>
-        <section class="card">
+        <section class="card highlight">
             <h2>Submission Confirmation</h2>
 
             <p>Your application has been successfully received and entered into the review process.</p>
 
-            <p><strong>Status:</strong> Received</p>
-            <p><strong>Review Stage:</strong> Initial Screening</p>
-            <p><strong>Estimated Review Time:</strong> 5–7 Business Days</p>
-
-            <p id="reference"></p>
+            <div class="status-summary">
+                <p><strong>Status:</strong> <span class="badge badge-success">Received</span></p>
+                <p><strong>Review Stage:</strong> Initial Screening</p>
+                <p><strong>Estimated Review Time:</strong> 5–7 Business Days</p>
+               
+                <!-- Added placeholder text to prevent Content Layout Shift (CLS) -->
+                <p id="reference"><strong>Reference Number:</strong> Generating...</p>
+            </div>
 
             <a class="button" href="index.html">Return to Home</a>
         </section>
     </main>
 
     <footer>
-        <p>Georgia Tech Student Endurance Ambassador Program</p>
+        <p>&copy; Georgia Institute of Technology. Student Endurance Ambassador Program.</p>
     </footer>
-
-    <script>
-        const refNum = "SEA-" + Math.floor(Math.random() * 90000 + 10000);
-        document.getElementById("reference").innerHTML =
-            "<strong>Reference Number:</strong> " + refNum;
-    </script>
 
 </body>
 </html>
