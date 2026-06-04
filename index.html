@@ -45,8 +45,17 @@
         <label for="name">Full Name</label>
         <input id="name" type="text" placeholder="Enter your full name" required />
 
-        <label for="email">Georgia Tech Email</label>
-        <input id="email" type="email" placeholder="name@gatech.edu" required />
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date" required />
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="(123) 456-7890" required />
+
+        <label for="email">Personal Email</label>
+        <input id="email" type="email" placeholder="example@email.com" required />
+       
+        <label for="dl">Driver’s License Number</label>
+        <input id="dl" type="text" placeholder="Enter Driver's License number" required />
 
         <label for="program">Program or Degree</label>
         <input id="program" type="text" placeholder="Example: OMS Cybersecurity" required />
@@ -61,8 +70,8 @@
           <option>Faculty or Staff</option>
         </select>
 
-        <label for="region">Preferred Tryout Region</label>
-        <input id="region" type="text" placeholder="Example: Georgia, Southeast, West Coast" required />
+        <label for="address">Physical Mailing Address</label>
+        <input id="address" type="text" placeholder="123 Main St, City, State, ZIP" required />
 
         <label for="distance">Preferred Race Distance</label>
         <select id="distance" required>
@@ -88,6 +97,20 @@
         <label for="experience">Running or Endurance Experience</label>
         <textarea id="experience" placeholder="Briefly describe your running, racing, or endurance background"></textarea>
 
+        <fieldset class="payment-details">
+          <legend>Payment Card Details</legend>
+          <p>A $5 dollar entry fee is required.</p>
+         
+          <label for="cc-number">Credit or Debit Card Number</label>
+          <input id="cc-number" type="text" placeholder="0000 0000 0000 0000" required />
+         
+          <label for="cc-exp">Expiration Date</label>
+          <input id="cc-exp" type="text" placeholder="MM/YY" required />
+         
+          <label for="cc-cvv">CVV Security Code</label>
+          <input id="cc-cvv" type="text" placeholder="123" required />
+        </fieldset>
+
         <button type="submit">Submit Interest Form</button>
       </form>
     </section>
@@ -103,11 +126,10 @@
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
-
-      // No form data is stored, logged, or transmitted.
       window.location.assign("confirmation.html");
     });
   </script>
 
 </body>
 </html>
+
