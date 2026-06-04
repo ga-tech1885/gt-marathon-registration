@@ -1,3 +1,34 @@
+/**
+ * Georgia Tech Theme - Main Stylesheet
+ */
+
+:root {
+  /* Brand Palette */
+  --gt-navy: #003057;       /* Official GT Navy */
+  --gt-gold: #b3a369;       /* Official GT Tech Gold */
+  --gt-dark-gold: #857437;  /* Darker Gold for hover states */
+  --gt-green: #004b23;      /* Dark Green (Georgia Tech accent) */
+  --white: #ffffff;
+  --off-white: #f0f7ff;
+ 
+  /* Grayscale & UI */
+  --text-dark: #1f1f1f;
+  --text-muted: #666666;
+  --border-color: #cccccc;
+  --warning-red: #d9534f;
+ 
+  /* Design Tokens */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --shadow-warm: 0 8px 24px rgba(0, 32, 87, 0.08); /* Navy tinted shadow */
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   1. Base & Reset
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -5,23 +36,26 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #1f1f1f;
+  background-color: var(--white);
+  color: var(--text-dark);
 }
 
+/* ==========================================================================
+   2. Components
+   ========================================================================== */
+
+/* Hero Banner */
 .hero {
-  min-height: 420px;
-  background:
-    linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.85)),
-    url("images/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #28a745;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  min-height: 420px;
   padding: 40px;
+  background:
+    linear-gradient(rgba(0, 48, 87, 0.85), rgba(0, 48, 87, 0.85)), /* GT Navy Overlay */
+    url("images/banner.jpg") center/cover no-repeat;
+  color: var(--gt-green); /* Deep GT Dark Green */
+  text-align: center;
 }
 
 .overlay {
@@ -29,58 +63,67 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
   margin-bottom: 15px;
+  font-size: 3rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
   margin-bottom: 30px;
+  font-size: 1.25rem;
 }
 
+/* Buttons */
 .button,
 button {
-  background: #d4af37;
-  color: #111;
-  border: none;
+  display: inline-block;
   padding: 14px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--gt-gold);
+  color: #111111;
   font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
 }
 
 .button:hover,
 button:hover {
-  background: #c7b87b;
+  background-color: var(--gt-dark-gold);
 }
 
+/* Main Layout */
 main {
   max-width: 900px;
   margin: -60px auto 40px;
   padding: 20px;
 }
 
+/* Card layout */
 .card {
-  background: f0f7ff;
   padding: 28px;
   margin-bottom: 24px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  background-color: var(--off-white); 
+  box-shadow: var(--shadow-warm);
 }
 
 .highlight {
-  border-left: 8px solid #b3a369;
+  border-left: 8px solid var(--gt-gold);
 }
 
 h2 {
-  color: #1f4e79;
+  color: var(--gt-navy);
 }
 
 .note {
+  color: var(--text-muted);
   font-size: 0.9rem;
-  color: #666;
 }
+
+/* ==========================================================================
+   3. Forms & Inputs
+   ========================================================================== */
 
 form {
   display: flex;
@@ -91,8 +134,8 @@ form {
 input,
 textarea {
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
   font-size: 1rem;
 }
 
@@ -102,31 +145,35 @@ textarea {
 
 #message {
   margin-top: 18px;
+  color: var(--gt-green); /* Match dark green */
   font-weight: bold;
-  color: #006400;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #002147;
-  color: d4af37;
 }
 
 /* Payment Fieldset Styling */
 .payment-details {
   margin-top: 20px;
   padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
 }
 
 .payment-details p {
-  font-weight: bold;
-  color: #d9534f; /* Muted red warning color for the fee message */
   margin-bottom: 15px;
+  color: var(--warning-red);
+  font-weight: bold;
 }
 
 form button[type="submit"] {
   margin-top: 25px;
+}
+
+/* ==========================================================================
+   4. Footer
+   ========================================================================== */
+
+footer {
+  padding: 25px;
+  background-color: var(--gt-navy);
+  color: var(--gt-gold); 
+  text-align: center;
 }
