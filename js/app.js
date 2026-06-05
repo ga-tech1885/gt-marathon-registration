@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Generates a randomized reference ID and safely updates the UI
+ * Generates a randomized reference ID 
  */
 function generateReferenceNumber() {
     const referenceContainer = document.getElementById('reference');
@@ -31,7 +31,6 @@ function generateReferenceNumber() {
 
 /**
  * GT Student Endurance Ambassador Program - Core Application Logic
- * Safely handles form processing and validation.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
