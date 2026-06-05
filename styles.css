@@ -6,8 +6,8 @@
   /* Brand Palette */
   --gt-navy: #003057;       /* Official GT Navy */
   --gt-gold: #b3a369;       /* Official GT Tech Gold */
-  --gt-dark-gold: #857437;  /* Darker Gold for hover states */
-  --gt-green: #004b23;      /* Dark Green (Georgia Tech accent) */
+  --gt-dark-gold: #857437;  /* Dark Gold for hover states */
+  --gt-green: #28a745;      /* Dark Green (Georgia Tech accent) */
   --white: #ffffff;
   --off-white: #f0f7ff;
  
@@ -54,7 +54,7 @@ body {
   background:
     linear-gradient(rgba(0, 48, 87, 0.85), rgba(0, 48, 87, 0.85)), /* GT Navy Overlay */
     url("images/banner.jpg") center/cover no-repeat;
-  color: var(--gt-green); /* Deep GT Dark Green */
+  color: var(--gt-green); /* Green */
   text-align: center;
 }
 
