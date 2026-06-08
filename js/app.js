@@ -6,14 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     generateReferenceNumber();
 });
 
-/**
- * Generates a randomized reference ID 
- */
 function generateReferenceNumber() {
     const referenceContainer = document.getElementById('reference');
     if (!referenceContainer) return;
 
-    // Generate a random 5-digit number
+    
     const uniqueId = Math.floor(10000 + Math.random() * 90000);
     const referenceCode = `SEA-${uniqueId}`;
 
@@ -29,10 +26,6 @@ function generateReferenceNumber() {
     referenceContainer.appendChild(value);
 }
 
-/**
- * GT Student Endurance Ambassador Program - Core Application Logic
- */
-
 document.addEventListener('DOMContentLoaded', () => {
     const registrationForm = document.getElementById('registrationForm');
    
@@ -42,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Validates and processes the registration form submission
  * @param {Event} event
  */
 function handleFormSubmission(event) {
@@ -62,7 +54,6 @@ function handleFormSubmission(event) {
 }
 
 /**
- * Standard email validation regex helper
  * @param {string} email
  * @returns {boolean}
  */
