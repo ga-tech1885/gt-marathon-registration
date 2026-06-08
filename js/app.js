@@ -1,5 +1,5 @@
 /**
- * GT Student Endurance Ambassador Program - Confirmation Logic
+ * Confirmation Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
