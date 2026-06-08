@@ -4,10 +4,10 @@
 
 :root {
   /* Brand Palette */
-  --gt-navy: #003057;       /* Official GT Navy */
-  --gt-gold: #b3a369;       /* Official GT Tech Gold */
-  --gt-dark-gold: #857437;  /* Dark Gold for hover states */
-  --gt-green: #ffffff;      /* Green */
+  --gt-navy: #003057;       /* Navy */
+  --gt-gold: #b3a369;       /* Gold */
+  --gt-dark-gold: #857437;  /* Darker Gold for hover states */
+  --gt-green: #ffffff;      /* White */
   --white: #ffffff;
   --off-white: #f0f7ff;
  
