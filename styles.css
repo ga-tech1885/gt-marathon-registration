@@ -3,31 +3,24 @@
  */
 
 :root {
-  /* Brand Palette */
-  --gt-navy: #003057;       /* Navy */
-  --gt-gold: #b3a369;       /* Gold */
-  --gt-dark-gold: #857437;  /* Darker Gold for hover states */
-  --gt-green: #ffffff;      /* White */
+  --gt-navy: #003057;
+  --gt-gold: #b3a369;
+  --gt-dark-gold: #857437;
+  --gt-white: #ffffff;
   --white: #ffffff;
   --off-white: #f0f7ff;
- 
-  /* Grayscale & UI */
+
   --text-dark: #1f1f1f;
   --text-muted: #666666;
   --border-color: #cccccc;
   --warning-red: #d9534f;
- 
-  /* Design Tokens */
+
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 12px;
-  --shadow-warm: 0 8px 24px rgba(0, 32, 87, 0.08); /* Navy tinted shadow */
+  --shadow-warm: 0 8px 24px rgba(0, 32, 87, 0.08);
   --transition-fast: 0.2s ease-in-out;
 }
-
-/* ==========================================================================
-   1. Base & Reset
-   ========================================================================== */
 
 * {
   box-sizing: border-box;
@@ -40,11 +33,6 @@ body {
   color: var(--text-dark);
 }
 
-/* ==========================================================================
-   2. Components
-   ========================================================================== */
-
-/* Hero Banner */
 .hero {
   display: flex;
   align-items: center;
@@ -52,9 +40,9 @@ body {
   min-height: 420px;
   padding: 40px;
   background:
-    linear-gradient(rgba(0, 48, 87, 0.85), rgba(0, 48, 87, 0.85)), /* GT Navy Overlay */
+    linear-gradient(rgba(0, 48, 87, 0.92), rgba(0, 48, 87, 0.92)),
     url("images/banner.jpg") center/cover no-repeat;
-  color: var(--gt-green); /* Green */
+  color: var(--gt-white);
   text-align: center;
 }
 
@@ -64,15 +52,20 @@ body {
 
 .hero h1 {
   margin-bottom: 15px;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .hero p {
   margin-bottom: 30px;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
 }
 
-/* Buttons */
+.hero h1,
+.hero p {
+  color: var(--gt-white);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+}
+
 .button,
 button {
   display: inline-block;
@@ -92,19 +85,17 @@ button:hover {
   background-color: var(--gt-dark-gold);
 }
 
-/* Main Layout */
 main {
   max-width: 900px;
   margin: -60px auto 40px;
   padding: 20px;
 }
 
-/* Card layout */
 .card {
   padding: 28px;
   margin-bottom: 24px;
   border-radius: var(--radius-lg);
-  background-color: var(--off-white); 
+  background-color: var(--off-white);
   box-shadow: var(--shadow-warm);
 }
 
@@ -121,10 +112,6 @@ h2 {
   font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   3. Forms & Inputs
-   ========================================================================== */
-
 form {
   display: flex;
   flex-direction: column;
@@ -132,7 +119,8 @@ form {
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 12px;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -145,21 +133,7 @@ textarea {
 
 #message {
   margin-top: 18px;
-  color: var(--gt-green); 
-  font-weight: bold;
-}
-
-/* Payment Fieldset Styling */
-.payment-details {
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-}
-
-.payment-details p {
-  margin-bottom: 15px;
-  color: var(--warning-red);
+  color: var(--gt-white);
   font-weight: bold;
 }
 
@@ -167,13 +141,9 @@ form button[type="submit"] {
   margin-top: 25px;
 }
 
-/* ==========================================================================
-   4. Footer
-   ========================================================================== */
-
 footer {
   padding: 25px;
   background-color: var(--gt-navy);
-  color: var(--gt-gold); 
+  color: var(--gt-gold);
   text-align: center;
 }
