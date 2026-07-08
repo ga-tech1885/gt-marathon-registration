@@ -1,131 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Georgia Tech Student Endurance Ambassador Program</title>
-    <meta name="description" content="Tryout interest form for the Georgia Tech Student Endurance Ambassador Program.">
-   
-    <link rel="stylesheet" href="styles.css">
-   
-    
-    <script src="js/app.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chasing Grace</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <header class="hero">
-        <div class="overlay">
-            <h1>Georgia Tech Student Endurance Ambassador Program</h1>
-            <p>Represent Georgia Tech. Compete regionally. Run with purpose.</p>
-            <a href="#apply" class="button">Apply for Tryouts</a>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Chasing Grace</h1>
+      <p>Poems, photographs, art, and quiet reflections on finding beauty.</p>
+      <a href="#latest" class="button">Explore</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>
+        Chasing Grace is a personal collection of writing, photography, artwork,
+        and reflections on beauty, memory, motherhood, healing, and everyday wonder.
+      </p>
+    </section>
+
+    <section class="card" id="latest">
+      <h2>Latest Reflections</h2>
+      <article>
+        <h3>First Post Title</h3>
+        <p>
+          Write a short preview of your first blog post, poem, or photo essay here.
+        </p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Collections</h2>
+      <div class="grid">
+        <div>
+          <h3>Poems</h3>
+          <p>Fragments, prayers, memories, and quiet observations.</p>
         </div>
-    </header>
+        <div>
+          <h3>Photography</h3>
+          <p>Light, ocean, home, family, and small beautiful moments.</p>
+        </div>
+        <div>
+          <h3>Art</h3>
+          <p>Paintings, sketches, glass desk projects, and creative experiments.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <section class="card">
-            <h2>Program Overview</h2>
-            <p>
-                The Georgia Tech Student Endurance Ambassador Program is a selective
-                opportunity for students interested in distance running, leadership,
-                and campus community engagement.
-            </p>
-            <p>
-                Selected applicants may be considered for sponsored participation in
-                regional marathon and endurance events.
-            </p>
-        </section>
-
-        <section class="card highlight">
-            <h2>Limited Spots Available</h2>
-            <p>
-                Tryout interest forms are being reviewed on a rolling basis. Early
-                applicants may receive priority consideration for regional placement.
-            </p>
-        </section>
-
-        <section class="card" id="apply">
-            <h2>Tryout Interest Form</h2>
-
-            
-            <form id="registrationForm" method="POST">
-               
-                <label for="name">Full Name</label>
-                <input id="name" type="text" placeholder="Enter your full name" required />
-
-                <label for="dob">Date of Birth</label>
-                <input id="dob" type="date" required />
-
-                <label for="phone">Phone Number</label>
-                <input id="phone" type="tel" placeholder="(123) 456-7890" required />
-
-                
-                <label for="email">Personal Email</label>
-                <input id="email" type="email" placeholder="example@email.com" required />
-               
-                <label for="program">Program or Degree</label>
-                <input id="program" type="text" placeholder="Example: Psychology" required />
-
-                <label for="affiliation">Campus Affiliation</label>
-                <select id="affiliation" required>
-                    <option value="">Select one</option>
-                    <option>Undergraduate Student</option>
-                    <option>Graduate Student</option>
-                    <option>Online Master's Student</option>
-                    <option>Teaching Assistant</option>
-                    <option>Faculty or Staff</option>
-                </select>
-
-                <label for="address">Physical Mailing Address</label>
-                <input id="address" type="text" placeholder="123 Main St, City, State, ZIP" required />
-
-                <label for="distance">Preferred Race Distance</label>
-                <select id="distance" required>
-                    <option value="">Select one</option>
-                    <option>5K</option>
-                    <option>10K</option>
-                    <option>Half Marathon</option>
-                    <option>Marathon</option>
-                    <option>Triathlon / Multi-sport</option>
-                </select>
-
-                <label for="shirt">Shirt Size</label>
-                <select id="shirt">
-                    <option value="">Select one</option>
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-
-                <label for="experience">Running or Endurance Experience</label>
-                <textarea id="experience" placeholder="Briefly describe your running, racing, or endurance background."></textarea>
-
-                <fieldset class="payment-details">
-                    <legend>Payment Card Details</legend>
-                    <p>A $5 dollar entry fee is required.</p>
-                   
-                    <label for="cc-number">Credit or Debit Card Number</label>
-                    <input id="cc-number" type="text" placeholder="0000 0000 0000 0000" required />
-                   
-                    <label for="cc-exp">Expiration Date</label>
-                    <input id="cc-exp" type="text" placeholder="MM/YY" required />
-                   
-                    <label for="cc-cvv">CVV Security Code</label>
-                    <input id="cc-cvv" type="text" placeholder="123" required />
-                </fieldset>
-
-                <button type="submit">Submit Interest Form</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; Georgia Institute of Technology. Student Endurance Ambassador Program.</p>
-        <p>Email: info@gatech.fit</p>
-    </footer>
+  <footer>
+    <p>Chasing Grace</p>
+  </footer>
 
 </body>
 </html>
-
